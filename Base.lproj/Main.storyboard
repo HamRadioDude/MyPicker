@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="8LG-QI-2u8">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Lottery Generator-->
+        <scene sceneID="z7L-24-tAC">
+            <objects>
+                <viewController id="NLo-iM-SCu" customClass="LotteryViewController" customModule="MyPicker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rKX-hO-pkW">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qxE-bL-32g">
+                                <rect key="frame" x="27.5" y="41" width="320" height="216"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="NLo-iM-SCu" id="7cg-cg-Qj6"/>
+                                    <outlet property="delegate" destination="NLo-iM-SCu" id="586-MF-Ejo"/>
+                                </connections>
+                            </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nzU-MT-zAE">
+                                <rect key="frame" x="43" y="306" width="289" height="30"/>
+                                <state key="normal" title="Generate Your Weekly Powerball Numbers"/>
+                                <connections>
+                                    <action selector="onButtonPress:" destination="NLo-iM-SCu" eventType="touchUpInside" id="Osl-L4-oL4"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wd6-Pv-58J">
+                                <rect key="frame" x="166.5" y="371" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="nzU-MT-zAE" firstAttribute="centerX" secondItem="rKX-hO-pkW" secondAttribute="centerX" id="45Z-uj-jMO"/>
+                            <constraint firstItem="qxE-bL-32g" firstAttribute="centerX" secondItem="rKX-hO-pkW" secondAttribute="centerX" id="9Zf-hv-vyS"/>
+                            <constraint firstItem="nzU-MT-zAE" firstAttribute="top" secondItem="qxE-bL-32g" secondAttribute="bottom" constant="49" id="IE4-0d-CSO"/>
+                            <constraint firstItem="qxE-bL-32g" firstAttribute="top" secondItem="thb-BF-1MH" secondAttribute="top" constant="21" id="cfc-hn-AXM"/>
+                            <constraint firstItem="Wd6-Pv-58J" firstAttribute="top" secondItem="nzU-MT-zAE" secondAttribute="bottom" constant="35" id="pSY-yL-B5S"/>
+                            <constraint firstItem="Wd6-Pv-58J" firstAttribute="centerX" secondItem="rKX-hO-pkW" secondAttribute="centerX" id="scO-zi-21B"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="thb-BF-1MH"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Lottery Generator" id="Aap-r2-FuY"/>
+                    <connections>
+                        <outlet property="numbersLabel" destination="Wd6-Pv-58J" id="Ldp-Qq-EIg"/>
+                        <outlet property="spin" destination="qxE-bL-32g" id="qjd-L1-NOk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FPe-uc-qPQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-386.39999999999998" y="802.848575712144"/>
+        </scene>
+        <!--Number Guess-->
+        <scene sceneID="hUM-DM-fAA">
+            <objects>
+                <viewController id="44R-ep-t2H" customClass="NumberViewController" customModule="MyPicker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gmy-Ba-OtH">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GAm-Cc-cth">
+                                <rect key="frame" x="27.5" y="90" width="320" height="216"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="44R-ep-t2H" id="RJX-ya-oPA"/>
+                                    <outlet property="delegate" destination="44R-ep-t2H" id="xpV-ns-aQW"/>
+                                </connections>
+                            </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fen-RW-1pF">
+                                <rect key="frame" x="150.5" y="372" width="74" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="Check!"/>
+                                <connections>
+                                    <action selector="onButtonPressed:" destination="44R-ep-t2H" eventType="touchUpInside" id="BjM-lc-heG"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VnQ-x8-fmp">
+                                <rect key="frame" x="187.5" y="473" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Guess what number I am thinking of!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lST-D0-26A">
+                                <rect key="frame" x="29.5" y="20" width="316" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="lST-D0-26A" firstAttribute="centerX" secondItem="gmy-Ba-OtH" secondAttribute="centerX" id="5Yq-Y1-0Tp"/>
+                            <constraint firstItem="VnQ-x8-fmp" firstAttribute="centerX" secondItem="gmy-Ba-OtH" secondAttribute="centerX" id="7pX-Ge-95B"/>
+                            <constraint firstItem="fen-RW-1pF" firstAttribute="top" secondItem="GAm-Cc-cth" secondAttribute="bottom" constant="66" id="Bpz-1v-3sB"/>
+                            <constraint firstItem="fen-RW-1pF" firstAttribute="centerX" secondItem="gmy-Ba-OtH" secondAttribute="centerX" id="Fff-2h-1Hg"/>
+                            <constraint firstItem="VnQ-x8-fmp" firstAttribute="top" secondItem="fen-RW-1pF" secondAttribute="bottom" constant="60" id="Y8w-NA-WHE"/>
+                            <constraint firstItem="GAm-Cc-cth" firstAttribute="centerX" secondItem="gmy-Ba-OtH" secondAttribute="centerX" id="chZ-b2-SM0"/>
+                            <constraint firstItem="GAm-Cc-cth" firstAttribute="top" secondItem="lST-D0-26A" secondAttribute="bottom" constant="46" id="hsf-2r-Pm7"/>
+                            <constraint firstItem="lST-D0-26A" firstAttribute="top" secondItem="3Ta-lh-B9w" secondAttribute="top" id="tCq-52-dUh"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="3Ta-lh-B9w"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Number Guess" id="rIK-Q2-LbQ"/>
+                    <connections>
+                        <outlet property="singlepicker" destination="GAm-Cc-cth" id="hMd-Op-D3P"/>
+                        <outlet property="winnerLabel" destination="VnQ-x8-fmp" id="xXY-ih-fX7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8hk-5B-TDX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="565.60000000000002" y="397.15142428785612"/>
+        </scene>
+        <!--Birthday Countdown-->
+        <scene sceneID="ntc-T2-s2T">
+            <objects>
+                <viewController id="vqd-J5-CaU" customClass="BirthdayViewController" customModule="MyPicker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Emu-Wc-WvS">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="LlZ-u7-h4d">
+                                <rect key="frame" x="27.5" y="20" width="320" height="216"/>
+                                <date key="date" timeIntervalSinceReferenceDate="573422779.26550496">
+                                    <!--2019-03-04 20:06:19 +0000-->
+                                </date>
+                                <date key="minimumDate" timeIntervalSinceReferenceDate="568033200">
+                                    <!--2019-01-01 11:00:00 +0000-->
+                                </date>
+                                <date key="maximumDate" timeIntervalSinceReferenceDate="599482800">
+                                    <!--2019-12-31 11:00:00 +0000-->
+                                </date>
+                            </datePicker>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wMr-dY-MQO">
+                                <rect key="frame" x="33.5" y="261" width="308" height="30"/>
+                                <state key="normal" title="Find Out How Many Days Until Your Birhtday!"/>
+                                <connections>
+                                    <action selector="onButtonPressed:" destination="vqd-J5-CaU" eventType="touchUpInside" id="ZGK-aC-QO3"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FDl-Cz-7Ou">
+                                <rect key="frame" x="187.5" y="362" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="wMr-dY-MQO" firstAttribute="centerX" secondItem="Emu-Wc-WvS" secondAttribute="centerX" id="4BM-gp-9dG"/>
+                            <constraint firstItem="FDl-Cz-7Ou" firstAttribute="centerX" secondItem="Emu-Wc-WvS" secondAttribute="centerX" id="67x-Yy-g7v"/>
+                            <constraint firstItem="wMr-dY-MQO" firstAttribute="top" secondItem="LlZ-u7-h4d" secondAttribute="bottom" constant="25" id="ArS-j0-r3b"/>
+                            <constraint firstItem="LlZ-u7-h4d" firstAttribute="top" secondItem="xU9-Gi-Viy" secondAttribute="top" id="EWY-sp-eg7"/>
+                            <constraint firstItem="FDl-Cz-7Ou" firstAttribute="centerX" secondItem="Emu-Wc-WvS" secondAttribute="centerX" id="We1-9a-Kq9"/>
+                            <constraint firstItem="LlZ-u7-h4d" firstAttribute="centerX" secondItem="Emu-Wc-WvS" secondAttribute="centerX" id="ZVQ-ww-4Vd"/>
+                            <constraint firstItem="FDl-Cz-7Ou" firstAttribute="top" secondItem="wMr-dY-MQO" secondAttribute="bottom" constant="71" id="esJ-86-eUS"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="xU9-Gi-Viy"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Birthday Countdown" id="4iO-Bc-2UN"/>
+                    <connections>
+                        <outlet property="birthdayPicker" destination="LlZ-u7-h4d" id="gzF-TQ-6vA"/>
+                        <outlet property="counterLabel" destination="FDl-Cz-7Ou" id="fht-Rv-KJs"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bxD-Gd-UYt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="565.60000000000002" y="-268.51574212893553"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="gff-71-zDL">
+            <objects>
+                <tabBarController id="8LG-QI-2u8" customClass="ViewController" customModule="MyPicker" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Hl1-zx-6r9">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="vqd-J5-CaU" kind="relationship" relationship="viewControllers" id="pck-XU-YkQ"/>
+                        <segue destination="44R-ep-t2H" kind="relationship" relationship="viewControllers" id="4qz-HF-EfV"/>
+                        <segue destination="NLo-iM-SCu" kind="relationship" relationship="viewControllers" id="D5r-g5-Ap6"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MXz-wF-weh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-385" y="65"/>
+        </scene>
+    </scenes>
+</document>
